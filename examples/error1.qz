@@ -1,0 +1,31 @@
+# Escolha Multipla
+#Only checks if it all has answer or not answers at all
+question pergunta1:
+    type multiple-choice
+    theme "Futebol"
+    text "Quem é o melhor jogador do mundo?"
+    answers{ 
+        a1 "Cristiano Ronaldo"
+        a2 "Pepe"
+        a3 "Quaresma" -> TRUE
+        a4 "Bruno Fernandes" -> FALSE
+    }
+
+
+text var1 
+var1 = 1231 
+
+number b
+b = "asdasd"
+
+array[number] sdfsd = get all from "bancoPerguntas.txt"
+
+number c = 12124
+
+number c = 5232
+
+p2 show
+
+capture request asasd
+
+array[number] ola = [123,"624"]

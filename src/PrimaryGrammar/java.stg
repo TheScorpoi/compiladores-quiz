@@ -1,0 +1,188 @@
+booleanValue ::= [
+   "TRUE":"true",
+   "FALSE":"false",
+   default:"null"
+]
+
+typeValue ::= [
+   "number":"int",
+   "bool":"boolean",
+   "text":"String",
+   "real":"Double",
+   default:"null"
+]
+
+typeFormat ::= [
+   "number":"",
+   "bool":"",
+   "text":"",
+   default:"null"
+]
+
+module(name, stat) ::= <<
+import java.util.*;
+import types.*;
+import SecondaryGrammar.*;
+import java.io.*;
+
+public class <name> {
+
+   public static void main(String[] args) {
+
+      String intro = "Caso a pergunta seja do tipo multiple-choice, insira o ID da resposta que acha que está correta, depois clique em enter e repita o processo. \nSe a pergunta for do tipo matching, insira os pares que acha correto no seguinte formato \"\<par da esquerda> -> \<par da direita>\", separando os pares por enter. \nEm ambas as situaçoes, quando nao quiser adicionar mais respostas, insira \":\".";
+      Scanner sc = new Scanner(System.in);
+      String input;
+      String s;
+      String[] splt;
+
+      SecondaryGrammarMain secMain = new SecondaryGrammarMain();
+      List\<Question> questionToReport = new ArrayList\<>();
+      Map\<String, List\<String>\> userAnswersMap = new HashMap\<>();
+      List\<String> edits = new ArrayList\<>();
+
+      <stats(stat)>
+   }
+}
+
+
+
+>>
+
+stats(stat) ::= <<
+<if(stat)><stat; separator="\n"><endif>
+>>
+
+declaration(type, var) ::= "<typeValue.(type)> <var>;"
+declarationArray(type, var) ::= "List\<<type>> <var> = new ArrayList\<>();"
+
+assign(stat,var,value) ::= <<
+<if(stat)><stats(stat)> <var> = <value>;<else><var> = <value>;<endif>
+>>
+
+assignArray(stat, value) ::= <<
+<stats(stat)>
+<value>
+>>
+
+shuffle(array) ::= <<
+<array> = <array>.asList(<array>);
+Collections.shuffle(<array>);
+<array>.toArray(<array>);
+>>
+
+shuffleAnswers(expr) ::= <<
+<expr>.setAnswersShuffle(<expr>);
+>>
+
+text(text) ::= <<
+<text; separator=" ">
+>>
+
+show(stat, expr) ::= <<
+<stats(stat)>
+System.out.println(<expr>);
+>>
+
+mChoice(var1, var2,id,type,theme,questionText, answers) ::=<<
+MultipleChoice <var1> = new MultipleChoice("<id>", "<type>", <theme>, <questionText>);
+String[][] <var2> = <answers>;
+for (String[] answer : <var2>) {
+   if (answer.length == 3) {
+      <var1>.addAnswer(answer[0], answer[1], Boolean.parseBoolean(answer[2]));
+   } else {
+      <var1>.addAnswer(answer[0], answer[1]);
+   }
+}
+>>
+
+matching(var, var2, var3, var4, id,type,theme, questionsLeft, answersRight, peers ) ::=<<
+Matching <var> = new Matching("<id>", "<type>", <theme>);
+
+String[][] <var2> = <questionsLeft>;
+for (String[] answer : <var2>) {
+   <var>.addQuestionLeft(answer[0], answer[1]);
+}
+
+String[][] <var3> = <answersRight>;
+for (String[] answer : <var3>) {
+   <var>.addAnswerRight(answer[0], answer[1]);
+}
+
+<if(peers)>
+String[][] <var4> = <peers>;
+for (String[] answer : <var4>) {
+   <var>.addPeers(answer[0], answer[1]);
+}
+<endif>
+>>
+
+edit(stat, k, var1) ::=<<
+<stats(stat)>
+edits.clear();
+s = "<k>";
+splt = s.split(",");
+for(int i = 0; i\<splt.length; i++){
+	edits.add(splt[i]);
+}
+<var1>.edit(edits);
+>>
+
+captureRequest(expr, var1, var2) ::= <<
+System.out.println("\n" + intro + "\n");
+<show("",expr)>
+Set\<String> <var1> = <expr>.getPossibleAnswers();
+ArrayList\<String> <var2> = new ArrayList\<>();
+
+while(true){
+   System.out.println("Insira a resposta (\":\" para terminar):");
+   input = sc.nextLine().replaceAll("\\\s+","");
+   if(!input.equals(":")){
+      if (!<var1>.contains(input)) {
+         System.out.println("ID da opçao inválido!");
+      } else if (<var2>.contains(input)) {
+         System.out.println("Opçao já inserida!");
+      } else {
+         <var2>.add(input);
+      }
+   } else {
+      break;
+   }
+   if (<var1>.size()== <var2>.size()) {
+      System.out.println("Todas as respostas já foram selecionadas");
+      break;
+   }
+}
+userAnswersMap.put(<expr>.getiD(), <var2>);
+questionToReport.add(<expr>);
+>>
+
+report(stat, filename) ::= <<
+<stats(stat)>
+String file = <filename>;
+List\<String> correctAnswers;
+try (PrintWriter out = new PrintWriter(new File(file))) {
+   for (Question question : questionToReport) {
+      String idQuestion = question.getiD();
+      for (String id : userAnswersMap.keySet()) { //key id_pergunta / values [id_respostas]
+         if (idQuestion == id) {
+            correctAnswers = question.getAnswer();
+            out.println(question);
+            for (String key : userAnswersMap.keySet()) {
+               if (key.equals(idQuestion)) {
+                  out.println("User answers   : " + userAnswersMap.get(key));
+               }
+            }
+            out.println("Correct answer : " + correctAnswers);
+            if (userAnswersMap.get(id).equals(correctAnswers)) {
+               out.println("CORRECT\n\n");
+            } else {
+               out.println("INCORRECT\n\n");
+            }
+         }
+      }
+   }
+} catch (FileNotFoundException e) {
+   ErrorHandling.printError("Filename is not found!");
+   System.exit(1);
+}
+>>

@@ -1,0 +1,52 @@
+quiz "Questionário de Teste"
+
+question pergunta1:
+    type multiple-choice
+    theme "Futebol"
+    text "Quem é o melhor jogador do mundo?"
+    answers{ 
+        a1 "Cristiano Ronaldo" -> TRUE
+        a2 "Pepe" -> FALSE
+        a3 "Quaresma" -> TRUE
+        a4 "Bruno Fernandes" -> FALSE
+    }
+
+question pergunta2:
+    type multiple-choice
+    theme "Futebol"
+    text "Qual seleção europeia ganhou o Euro 2016?"
+    answers{ 
+        a1 "Portugal" -> TRUE
+        a2 "França" -> FALSE
+        a3 "Espanha" -> FALSE
+        a4 "Austrália" -> FALSE
+    }
+
+question pergunta3:
+    type matching
+    theme "Basquetebol"
+    setLeft{
+        element1 "O primeiro jogo de basquete foi disputado"
+        element2 "O jogador de basquete mais alto de todos os tempos"
+        element5 "Lebron James"
+        element6 "Stephen Curry" 
+    }
+    setRight{
+        element3 "em 20 de janeiro de 1892"
+        element4 "foi Suleiman Ali"
+        element7 "sao jogadores de Basquetebol"
+    }
+    rightPeer{
+        element1 -> element3
+        element2 -> element4
+        element5 -> element7
+        element6 -> element7
+    } 
+
+capture request pergunta1
+
+capture request pergunta2
+
+capture request pergunta3
+
+report "reportQuizz.txt"

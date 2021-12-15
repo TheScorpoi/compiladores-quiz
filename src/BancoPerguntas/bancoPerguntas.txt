@@ -1,0 +1,387 @@
+question pergunta1:
+    type multiple-choice
+    theme "Futebol"
+    text "Quem e o melhor jogador do mundo?"
+    answers{ 
+        a1 "Cristiano Ronaldo"
+        a2 "Pepe"
+        a3 "Quaresma"
+        a4 "Bruno Fernandes"
+    }
+
+question pergunta2:
+    type multiple-choice
+    theme "Futebol"
+    text "Qual seleçao europeia ganhou o Euro 2016?"
+    answers{ 
+        a1 "Portugal" -> TRUE
+        a2 "França" -> FALSE
+        a3 "Espanha" -> FALSE
+        a4 "Australia" -> FALSE
+    }
+
+question pergunta3:
+    type multiple-choice
+    theme "Futebol"
+    text "Que jogador recebeu o titulo de melhor golo da Champions na epoca 2020/2021"
+    answers{ 
+        a1 "Cristiano Ronaldo" -> FALSE
+        a2 "Pepe" -> FALSE
+        a3 "Taremi" -> TRUE
+        a4 "Bruno Fernandes" -> FALSE
+    }
+
+question pergunta4:
+    type multiple-choice
+    theme "Futebol"
+    text "Jose Mourinho vai ser o treinador de equipa na epoca 2020/2021?"
+    answers{ 
+        a1 "Juventus"
+        a2 "Roma"
+        a3 "Milan"
+        a4 "Internazionale"
+    }
+
+question pergunta5:
+    type multiple-choice
+    theme "Futebol"
+    text "Qual e a equipa com mais vitorias na liga dos Campeoes?"
+    answers{ 
+        a1 "Porto"
+        a2 "Barcelona"
+        a3 "Real Madrid"
+        a4 "Manchester United"
+    }
+
+question pergunta6:
+    type multiple-choice
+    theme "Formula 1"
+    text "Qual e o piloto com mais vitorias no Monaco?"
+    answers{ 
+        a1 "Airton Senna" -> TRUE
+        a2 "Lewis Hamilton" -> FALSE
+        a3 "Sebastian Vettel" -> FALSE
+        a4 "Alain Prost" -> FALSE
+    }
+
+question pergunta7:
+    type multiple-choice
+    theme "Formula 1"
+    text "Onde foi o Grande Premio de F1 com maior duraçao?"
+    answers{ 
+        a1 "Portugal"
+        a2 "Espanha"
+        a3 "Canada"
+        a4 "Belgica"
+    }
+
+question pergunta8:
+    type multiple-choice
+    theme "Formula 1"
+    text "Em que corrida na epoca de 2021 e que pela primeira vez Max Verstapen e Lewis Hamilton nao pontuaram em simultaneo?"
+    answers{ 
+        a1 "GP Portugal"
+        a2 "GP Arzebeijao"
+        a3 "GP Turquia"
+        a4 "GP Singapura"
+    }
+	
+question pergunta9:
+    type multiple-choice
+    theme "Formula 1"
+    text "Quantas sessoes de treino em circunstancias normais existem por cada grande premio?"
+    answers{ 
+        a1 "1" -> TRUE
+        a2 "2" -> FALSE
+        a3 "3" -> FALSE
+        a4 "4" -> FALSE
+    }
+
+question pergunta10:
+    type multiple-choice
+    theme "Formula 1"
+    text "Atualmente a grelha de F1 e composta por quantas equipas?"
+    answers{ 
+        a1 "10" -> TRUE
+        a2 "15" -> FALSE
+        a3 "20" -> FALSE
+        a4 "25" -> FALSE
+    }
+
+question pergunta11:
+    type multiple-choice
+    theme "Animal"
+    text "Qual e o maior animal do mundo?"
+    answers{ 
+        a1 "Baleia Azul" -> TRUE
+        a2 "Hipopotamo" -> FALSE
+        a3 "Dinossauro T-Rex" -> FALSE
+        a4 "Cao" -> FALSE
+    }
+
+question pergunta12:
+    type multiple-choice
+    theme "Animal"
+    text "Qual destes animais morde com mais força?"
+    answers{ 
+        a1 "Lobo"
+        a2 "Hipopotamo"
+        a3 "Leao"
+        a4 "Crocodilo"
+    }
+
+question pergunta13:
+    type multiple-choice
+    theme "Animal"
+    text "Qual e o passaro mais rapido no mundo?"
+    answers{ 
+        a1 "ogea"
+        a2 "Coruja"
+        a3 "aguia"
+        a4 "Falcao Peregrino"
+    }
+
+question pergunta14:
+    type multiple-choice
+    theme "Animal"
+    text "Em media quantas horas e que um coala dorme por dia?"
+    answers{ 
+        a1 "4" -> FALSE
+        a2 "10" -> FALSE
+        a3 "16" -> FALSE
+        a4 "22" -> TRUE
+    }
+
+question pergunta15:
+    type multiple-choice
+    theme "Animal"
+    text "Qual destes animais nao e um mamifero?"
+    answers{ 
+        a1 "Vaca" -> FALSE
+        a2 "Morcego" -> TRUE
+        a3 "Tubarao" -> FALSE
+        a4 "Urso" -> FALSE
+    }
+
+question pergunta16:
+    type multiple-choice
+    theme "Geografia"
+    text "Qual e a capital da Alemanha?"
+    answers{ 
+        a1 "Hambuger" -> FALSE
+        a2 "Berlim" -> TRUE
+        a3 "Varsovia" -> FALSE
+        a4 "Paris" -> FALSE
+    }
+
+question pergunta17:
+    type multiple-choice
+    theme "Geografia"
+    text "Qual e o maior continente?"
+    answers{ 
+        a1 "Europa"
+        a2 "America do Norte"
+        a3 "asia"
+        a4 "Australia"
+    }
+
+question pergunta18:
+    type multiple-choice
+    theme "Geografia"
+    text "Quantos paises constituem africa?"
+    answers{ 
+        a1 "34"
+        a2 "45"
+        a3 "54"
+        a4 "61"
+    }
+
+question pergunta19:
+    type multiple-choice
+    theme "Geografia"
+    text "Qual destas cidades tem o maior numero de habitantes?"
+    answers{ 
+        a1 "Delhi"
+        a2 "Toquio"
+        a3 "Sao Paulo"
+        a4 "Xangai"
+    }
+
+question pergunta20:
+    type multiple-choice
+    theme "Geografia"
+    text "Qual destes paises europeus tem o maior numero de habitantes"
+    answers{ 
+        a1 "Alemanha" -> FALSE
+        a2 "França" -> FALSE
+        a3 "Reino Unido" -> FALSE
+        a4 "Russia" -> TRUE
+    }
+
+question pergunta21:
+    type multiple-choice
+    theme "Cultura geral"
+    text "Qual e a cidade que e conhecida por ser a capital do movel em Portugal?"
+    answers{    
+        a1 "Viseu"
+        a2 "Aveiro"
+        a3 "Alcobaça"
+        a4 "Paços de Ferreira"
+    }
+
+question pergunta22:
+    type multiple-choice
+    theme "Cultura Geral"
+    text "Qual a primeira mulher a ganhar um premio Nobel da Fisica e outro da Quimica?"
+    answers{ 
+        a1 "Marie Curie" -> TRUE
+        a2 "Maria Leal" -> FALSE
+        a3 "Marie Fatime" -> FALSE
+        a4 "Marie Bordeux" -> FALSE
+    }
+	
+question pergunta23:
+    type multiple-choice
+    theme "Cultura Geral"
+    text "Qual e a galaxia mais proxima da nossa?"
+    answers{ 
+        a1 "Olho Negro"
+        a2 "Via Lactea"
+        a3 "Andrmeda"
+        a4 "Ursa Maior"
+    }
+	
+question pergunta25:
+    type multiple-choice
+    theme "Cultura Geral"
+    text "Qual e o planeta mais proximo da Terra?"
+    answers{ 
+        a1 "Venus" -> TRUE
+        a2 "Marte" -> FALSE
+        a3 "Mercurio" -> FALSE
+        a4 "Jupiter" -> FALSE
+    }
+	
+question pergunta26:
+    type multiple-choice
+    theme "Cultural geral"
+    text "Quantas casas decimais tem o numero PI?"
+    answers{ 
+        a1 "Duas" -> FALSE
+        a2 "Quatro" -> FALSE
+        a3 "Doze" -> FALSE
+        a4 "Infinitas" -> TRUE
+    }
+
+question pergunta27:
+    type matching
+    theme "Basquetebol"
+    setLeft{
+        element1 "O primeiro jogo de basquete foi disputado"
+        element2 "O jogador de basquete mais alto de todos os tempos"
+        element5 "Lebron James"
+        element6 "Stephen Curry" 
+    }
+    setRight{
+        element3 "em 20 de janeiro de 1892"
+        element4 "foi Suleiman Ali"
+        element7 "sao jogadores de Basquetebol"
+    }
+
+question pergunta28:
+    type matching
+    theme "Futebol"
+    setLeft{
+        element1 "O jogador Cristiano Ronaldo esta atualmente na equipa "
+        element2 "O jogador Rui Patricio esta atualmente na equipa "
+        element3 "O jogador Pepe esta atualmente na equipa "
+        element4 "O jogador Bernardo Silva esta atualmente na equipa " 
+    }
+    setRight{
+        element5 "Porto"
+        element6 "Manchester City"
+        element7 "Juventus"
+        element8 "Wolverhampton"
+    }
+
+question pergunta32:
+    type matching
+    theme "Futebol"
+    setLeft{
+        element1 "A equipa Bayern de Munique e "
+        element2 "A equipa Juventus e "
+        element3 "A equipa Arsenal e "
+        element4 "A equipa Atletico de Madrid e " 
+    }
+    setRight{
+        element5 "Inglesa"
+        element6 "Alema"
+        element7 "Espanhola"
+        element8 "Italiana"
+    }
+    rightPeer{
+        element1 -> element6
+        element2 -> element8
+        element3 -> element5
+        element4 -> element7
+    }  
+
+question pergunta33:
+    type matching
+    theme "Formula 1"
+    setLeft{
+        element1 "Atualmente o piloto Valteri Bottas e companheiro de equipa de "
+        element2 "Atualmente o piloto Calos Sainz e companheiro de equipa de "
+        element3 "Atualmente o piloto Max Verstappen e companheiro de equipa de "
+        element4 "Atualmente o piloto Lando Norris e companheiro de equipa de " 
+    }
+    setRight{
+        element5 "Sergio Perez"
+        element6 "Charles Leclerc"
+        element7 "Daniel Ricciardo"
+        element8 "Lewis Hamilton"
+    }
+    rightPeer{
+        element1 -> element8
+        element2 -> element6
+        element3 -> element5
+        element4 -> element7
+    }  
+
+question pergunta34:
+    type matching
+    theme "Cultura geral"
+    setLeft{
+        element1 "Russel Crow entrou no filme "
+        element2 "Daniel Craig entrou no filme "
+        element3 "Scarlett Johansson entrou no filme "
+        element4 "Leonardo DiCaprio entrou no filme " 
+    }
+    setRight{
+        element5 "James Bond"
+        element6 "Inception"
+        element7 "The Island"
+        element8 "Gladiador"
+    }
+
+question pergunta35:
+    type matching
+    theme "Cultura geral"
+    setLeft{
+        element1 "A Samsung e uma marca de "
+        element2 "A Castrol e uma marca de "
+        element3 "A Pirelli e uma marca de "
+        element4 "A Nike e uma marca de " 
+    }
+    setRight{
+        element5 "pneus"
+        element6 "produtos desportivos"
+        element7 "produtos eletronicos"
+        element8 "lubrificante automotivo"
+    }
+    rightPeer{
+        element1 -> element7
+        element2 -> element8
+        element3 -> element5
+        element4 -> element6
+    }

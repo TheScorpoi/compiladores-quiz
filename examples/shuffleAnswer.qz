@@ -1,0 +1,17 @@
+
+question pergunta1:
+    type multiple-choice
+    theme "Futebol"
+    text "Qual seleção europeia ganhou o Euro 2016?"
+    answers{ 
+        a1 "Portugal" -> TRUE
+        a2 "França" -> FALSE
+        a3 "Espanha" -> FALSE
+        a4 "Austrália" -> FALSE
+    }
+
+pergunta1 show
+
+pergunta1 shuffle answers
+
+pergunta1 show

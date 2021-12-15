@@ -1,0 +1,45 @@
+quiz "Quiz de perguntas editadas"
+
+question pergunta1:
+    type multiple-choice
+    theme "Futebol"
+    text "Qual selecao europeia ganhou o Euro 2016?"
+    answers{ 
+        a1 "Portugal" -> TRUE
+        a2 "Franca" -> FALSE
+        a3 "Espanha" -> FALSE
+        a4 "Australia" -> FALSE
+    }
+
+question pergunta2:
+    type matching
+    theme "Basquetebol"
+    setLeft{
+        element1 "O primeiro jogo de basquete foi disputado"
+        element2 "O jogador de basquete mais alto de todos os tempos"
+        element5 "Lebron James"
+        element6 "Stephen Curry" 
+    }
+    setRight{
+        element3 "em 20 de janeiro de 1892"
+        element4 "foi Suleiman Ali"
+        element7 "sao jogadores de Basquetebol"
+    }
+    rightPeer{
+        element1 -> element3
+        element2 -> element4
+        element5 -> element7
+        element6 -> element7
+    } 
+
+edit pergunta1:
+        select a1, a2
+
+edit pergunta2:
+        select element1, element3, element5, element4 
+
+capture request pergunta1
+
+capture request pergunta2
+
+report "quizWithQuestionsEdited.txt"

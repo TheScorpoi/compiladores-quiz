@@ -1,0 +1,29 @@
+question pergunta1:
+	type multiple-choice
+	theme "Futebol"
+	text "Qual seleção europeia ganhou o Euro 2016?"
+		a1 "Portugal" 
+		a2 "França" 
+
+User answers   : []
+Correct answer : [a1]
+INCORRECT
+
+
+question pergunta2:
+	type matching
+	theme "Basquetebol"
+	setLeft{
+		element1 O primeiro jogo de basquete foi disputado
+		element5 Lebron James
+	}
+	setRight{
+		element3 em 20 de janeiro de 1892
+		element4 foi Suleiman Ali
+	}
+
+User answers   : []
+Correct answer : [element1->element3]
+INCORRECT
+
+

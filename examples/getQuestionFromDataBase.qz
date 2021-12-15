@@ -1,0 +1,6 @@
+
+array[question] questionDB
+
+questionDB = get all from "bancoPerguntas.txt"
+
+

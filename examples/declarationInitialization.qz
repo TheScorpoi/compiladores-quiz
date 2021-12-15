@@ -1,0 +1,56 @@
+
+#declaration
+number n
+text t
+real r
+bool b
+
+#initialization
+n = 2
+t = "ola"
+r = 2.4
+b = TRUE
+
+#declaration arrays
+array[number] arrayN
+array[text] arrayT
+array[real] arrayR
+array[bool] arrayB
+
+#initialization arrays
+arrayN = [1, 3, 5, 6]
+arrayT = ["ola", "adeus", "sol", "lua"]
+arrayR = [1.3, 3.4, 5.6, 6.7]
+arrayB = [TRUE, FALSE, FALSE, TRUE]
+
+#prints
+n show
+t show
+r show
+b show
+
+#declaration and initialization
+number n2 = 4
+text t2 = "declaration and initialization"
+real r2 = 4.5
+bool b2 = true
+
+#prints
+n2 show
+t2 show
+r2 show
+b2 show
+
+#create a question
+question pergunta1:
+    type multiple-choice
+    theme "Futebol"
+    text "Quem é o melhor jogador do mundo?"
+    answers{ 
+        a1 "Cristiano Ronaldo" -> TRUE
+        a2 "Pepe" -> FALSE
+        a3 "Quaresma" -> TRUE
+        a4 "Bruno Fernandes" -> FALSE
+    }
+
+pergunta1 show

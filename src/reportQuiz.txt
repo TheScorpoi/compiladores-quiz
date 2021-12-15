@@ -1,0 +1,48 @@
+question pergunta1:
+	type multiple-choice
+	theme "Futebol"
+	text "Quem é o melhor jogador do mundo?"
+		a1 "Cristiano Ronaldo" 
+		a2 "Pepe" 
+		a3 "Quaresma" 
+		a4 "Bruno Fernandes" 
+
+User answers   : [a1, a3]
+Correct answer : [a1, a3]
+CORRECT
+
+
+question pergunta2:
+	type multiple-choice
+	theme "Futebol"
+	text "Qual seleção europeia ganhou o Euro 2016?"
+		a1 "Portugal" 
+		a2 "França" 
+		a3 "Espanha" 
+		a4 "Austrália" 
+
+User answers   : [a1]
+Correct answer : [a1]
+CORRECT
+
+
+question pergunta3:
+	type matching
+	theme "Basquetebol"
+	setLeft{
+		element1 O primeiro jogo de basquete foi disputado
+		element2 O jogador de basquete mais alto de todos os tempos
+		element5 Lebron James
+		element6 Stephen Curry
+	}
+	setRight{
+		element3 em 20 de janeiro de 1892
+		element4 foi Suleiman Ali
+		element7 sao jogadores de Basquetebol
+	}
+
+User answers   : [element1->element3]
+Correct answer : [element1 -> element3, element2 -> element4, element5 -> element7, element6 -> element7]
+INCORRECT
+
+

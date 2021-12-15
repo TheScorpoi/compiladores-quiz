@@ -1,0 +1,5 @@
+*.class
+*.tokens
+*.interp
+*.swp
+*.antlr

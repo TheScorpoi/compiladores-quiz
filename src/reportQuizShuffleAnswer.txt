@@ -1,0 +1,28 @@
+question pergunta1:
+	type multiple-choice
+	theme "Futebol"
+	text "Qual seleção europeia ganhou o Euro 2016?"
+		a1 "Portugal" 
+		a2 "França" 
+		a3 "Espanha" 
+		a4 "Austrália" 
+
+User answers   : [a1]
+Correct answer : [a1]
+CORRECT
+
+
+question pergunta2:
+	type multiple-choice
+	theme "Futebol"
+	text "Qual seleção europeia ganhou o Euro 2016?"
+		a1 "Portugal" 
+		a2 "Austrália" 
+		a3 "Espanha" 
+		a4 "França" 
+
+User answers   : [a1]
+Correct answer : [a1]
+CORRECT
+
+
